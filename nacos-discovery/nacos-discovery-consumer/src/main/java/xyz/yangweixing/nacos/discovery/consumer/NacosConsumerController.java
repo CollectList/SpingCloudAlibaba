@@ -29,10 +29,10 @@ public class NacosConsumerController {
     @Value("${spring.application.name}")
     private String appName;
 
-    @GetMapping(value = "/test/app/name")
+    @GetMapping(value = "/test")
     public String test() {
         //使用 LoadBalanceClient 和 RestTemplate 结合的方式来访问
-        ServiceInstance serviceInstance = loadBalancerClient.choose("nacos-provider");
+        ServiceInstance serviceInstance = loadBalancerClient.choose("nacos-discovery-provider");
         String url = String.format("http://%s:%s/test/%s", serviceInstance.getHost(), serviceInstance.getPort(), appName);
         return restTemplate.getForObject(url, String.class);
     }
