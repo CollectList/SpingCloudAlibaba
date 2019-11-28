@@ -16,6 +16,7 @@ public class NacosProviderController {
 
     @GetMapping(value = "/test/{message}")
     public String test(@PathVariable("message") String message) {
+
         return "Hello " + message;
     }
 
