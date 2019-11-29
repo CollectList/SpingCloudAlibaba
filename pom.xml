@@ -6,20 +6,24 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.7.RELEASE</version>
+        <version>2.1.8.RELEASE</version>
     </parent>
 
     <groupId>xyz.yangweixing</groupId>
     <artifactId>xyz-spring-cloud-alibaba</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
+    <name>SpingCloudAlibaba</name>
+    <url>https://yangweixing.xyz</url>
+
     <modules>
         <module>nacos-config</module>
         <module>nacos-discovery</module>
         <module>nacos-openfeign</module>
+        <module>nacos-gateway</module>
+        <module>nacos-common</module>
     </modules>
-    <name>SpingCloudAlibaba</name>
-    <url>https://yangweixing.xyz</url>
+
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

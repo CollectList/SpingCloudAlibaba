@@ -34,6 +34,12 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
         <!-- Spring Cloud End-->
+
+        <dependency>
+            <groupId>xyz.yangweixing</groupId>
+            <artifactId>nacos-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>

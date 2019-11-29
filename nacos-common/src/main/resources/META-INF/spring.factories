@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  xyz.yangweixing.nacos.common.config.CommonConfiguration

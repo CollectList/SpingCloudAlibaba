@@ -3,43 +3,41 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>nacos-discovery</artifactId>
+        <artifactId>xyz-spring-cloud-alibaba</artifactId>
         <groupId>xyz.yangweixing</groupId>
         <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>nacos-discovery-consumer</artifactId>
+    <artifactId>nacos-gateway</artifactId>
 
     <dependencies>
-        <!-- Spring Boot Begin -->
+        <!-- Spring Cloud Begin -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <artifactId>spring-boot-starter-webflux</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-        <!-- Spring Boot End -->
 
-        <!-- Spring Cloud Begin -->
         <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-        <!-- Spring Cloud End -->
-        <dependency>
-            <groupId>xyz.yangweixing</groupId>
-            <artifactId>nacos-common</artifactId>
-            <version>1.0.0</version>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.1</version>
         </dependency>
     </dependencies>
+
 
     <build>
         <plugins>
@@ -47,7 +45,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
-                    <mainClass>xyz.yangweixing.nacos.discovery.consumer.NacosDiscoveryConsumerApplication</mainClass>
+                    <mainClass>xyz.yangweixing.nacos.openfigen.NacosFeignApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>
